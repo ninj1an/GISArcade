@@ -1,0 +1,16 @@
+// Wrote this conditional color for labels to determine if a surface feature was categorized as reserved or for guests
+
+var label = $feature.Name;
+var type = DomainName($feature, "Name");
+var color;
+
+if(DomainName($feature, 'Name')=="Guest Parking"){
+   return "<CLR red= '0' green= '0' blue='0'>"+ $feature.Name+ "</CLR>"
+  }
+else if(DomainName($feature, 'Name')=="Dominican Center") {
+   return "<CLR red= '0' green= '0' blue='0'>"+ $feature.Name+ "</CLR>"
+}
+else {
+   return "<CLR red= '255' green= '0' blue='0'>" + $feature.Name + "</CLR>"
+  }
+
